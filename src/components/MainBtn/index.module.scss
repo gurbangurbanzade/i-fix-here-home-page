@@ -1,0 +1,35 @@
+@import "./../../assets/styles/abstracts/mixins";
+.mainBtn {
+  padding: 1rem 1.8rem;
+  border-radius: 0.8rem;
+  color: white;
+  border: 1px solid;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  @include flexBox();
+  gap: 10px;
+}
+
+.blueBtn {
+  color: #ffffff;
+  background-color: #444ce7;
+  border-color: #444ce7;
+}
+
+.whiteBtn {
+  color: #3538cd;
+  background-color: #eef4ff;
+  border-color: #eef4ff;
+}
+
+.blueBtnLarge {
+  color: #ffffff;
+  background-color: #444ce7;
+  border-color: #444ce7;
+  padding: 1.6rem 2.8rem;
+  gap: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 600;
+}

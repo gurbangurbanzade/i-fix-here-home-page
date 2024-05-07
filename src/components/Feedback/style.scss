@@ -1,0 +1,38 @@
+.card-slider {
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+
+  .cards {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .card {
+    flex: 0 0 300px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+
+    &.right {
+      right: 0;
+    }
+
+    &.left {
+      left: 0;
+    }
+  }
+}

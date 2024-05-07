@@ -1,0 +1,69 @@
+@import "./../../assets/styles/abstracts/mixins";
+#header {
+  background-color: #2d31a6;
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding: 1.8rem 1.6rem;
+    @include flexBox(row, space-between, center);
+    .nav {
+      ul {
+        @include flexBox(row, space-between, center);
+        gap: 3.2rem;
+        li {
+          @include flexBox();
+          gap: 0.8rem;
+          a {
+            color: #c7d7fe;
+            font-weight: 600;
+            line-height: 2.4rem;
+          }
+        }
+      }
+    }
+    .btnBox {
+      @include flexBox();
+      gap: 0.8rem;
+    }
+    .burgerMenu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #header {
+    #navbar {
+      .btnBox {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  #header {
+    #navbar {
+      padding: 1.4rem 1.6rem;
+      .nav {
+        ul {
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #header {
+    #navbar {
+      .nav {
+        display: none;
+      }
+      .burgerMenu {
+        display: block;
+      }
+    }
+  }
+}

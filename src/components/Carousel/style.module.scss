@@ -1,0 +1,30 @@
+@import "./../../assets/styles/abstracts/mixins";
+
+#devices {
+  @include flexBox(row, space-between, center);
+  border-bottom: 0.1rem solid #d0d5dd;
+  border-top: 0.1rem solid #d0d5dd;
+  padding: 6.4rem 5.6rem;
+  gap: 3.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  .card {
+    min-width: 19.5rem;
+    height: 12.8rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #d0d5dd;
+    @include flexBox(column, center, center);
+    gap: 1.2rem;
+    box-shadow: 0 1 1 0 #101828;
+
+    div {
+      width: 5.6rem;
+      height: 5.6rem;
+      border-radius: 50%;
+      @include flexBox();
+      background-color: #e0eaff;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import "./../../assets/styles/abstracts/mixins";
+
+#hero {
+  @include flexBox(row, space-between, center);
+  padding: 9.6rem 3.2rem;
+  .textBox {
+    @include flexBox(column, center, flex-start);
+    width: 50%;
+    gap: 48px;
+    h1 {
+      font-weight: 600;
+      font-size: 6rem;
+      line-height: 7.2rem;
+      letter-spacing: -2px;
+      font-size: 60px;
+      letter-spacing: -0.25rem;
+      color: #101828;
+    }
+  }
+  .imageBox {
+    width: 50%;
+    @include flexBox();
+  }
+}
+
+@media (max-width: 1200px) {
+  #hero {
+    @include flexBox(row, space-between, center);
+    padding: 7.6rem 0rem;
+    .textBox {
+      h1 {
+        font-size: 5rem;
+        line-height: 6.2rem;
+      }
+    }
+    .imageBox {
+      img {
+        width: 46rem;
+        height: 50.2rem;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  #hero {
+    @include flexBox(row, space-between, center);
+    padding: 7.6rem 0rem;
+    .textBox {
+      h1 {
+        font-size: 4rem;
+        line-height: 5.2rem;
+      }
+    }
+    .imageBox {
+      img {
+        width: 40.3rem;
+        height: 44rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    @include flexBox(column, center, flex-start);
+    padding: 4.8rem 0rem;
+    gap: 6.4rem;
+    .textBox {
+      width: 100%;
+      gap: 3.2rem;
+      h1 {
+        font-size: 3.3rem;
+        font-weight: 600;
+        line-height: 4.4rem;
+        letter-spacing: -0.19rem;
+      }
+      button {
+        width: 100%;
+        padding: 1.2rem 2rem;
+      }
+    }
+    .imageBox {
+      width: 100%;
+      img {
+        object-fit: contain;
+        width: 31.3rem;
+        height: 34.4rem;
+      }
+    }
+  }
+}

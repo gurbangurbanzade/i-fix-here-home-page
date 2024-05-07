@@ -1,0 +1,28 @@
+.accordionItem {
+  border-bottom: 1px solid #ccc;
+
+  &.active {
+    .accordion-content {
+      display: block;
+    }
+
+    .accordionHeader::after {
+      content: "-";
+    }
+  }
+
+  .accordionHeader {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &::after {
+      content: "+";
+    }
+  }
+
+  .accordion-content {
+    display: none;
+    padding: 10px;
+  }
+}

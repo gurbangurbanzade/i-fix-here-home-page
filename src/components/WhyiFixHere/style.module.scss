@@ -1,0 +1,119 @@
+@import "./../../assets/styles/abstracts/mixins.scss";
+#whyiFix {
+  @include flexBox(column, center, center);
+  border-top: 0.1rem solid #d0d5dd;
+  padding: 9.6rem 0rem;
+
+  h2 {
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 4.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #101828;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    text-align: center;
+    color: #667085;
+    margin-bottom: 6.4rem;
+    max-width: 76.8rem;
+  }
+  .infoBox {
+    display: grid;
+    grid-template-columns: 40rem 40rem;
+    grid-template-rows: 19.4rem 19.4rem;
+    gap: 3.2rem 9.6rem;
+    .infoCard {
+      @include flexBox(column, center, center);
+
+      h4 {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: #101828;
+        margin-bottom: 0.8rem;
+      }
+      .text {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: #667085;
+        text-align: center;
+      }
+    }
+    & > :first-child,
+    & > :nth-child(3) {
+      div {
+        font-size: 4.8rem;
+        font-weight: 600;
+        line-height: 6rem;
+        color: #444ce7;
+        margin-bottom: 1.8rem;
+        letter-spacing: -2%;
+      }
+    }
+    & > :nth-child(2) & > :nth-child(4) {
+      div {
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #whyiFix {
+    padding: 6.4rem 0rem;
+    .infoBox {
+      grid-template-columns: 40rem 40rem;
+      grid-template-rows: 19.4rem 19.4rem;
+      gap: 4rem 3rem;
+    }
+  }
+}
+@media (max-width: 992px) {
+  #whyiFix {
+    .infoBox {
+      grid-template-columns: 35rem 35rem;
+      grid-template-rows: 19.4rem 19.4rem;
+      gap: 4rem 1rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #whyiFix {
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 3.8rem;
+      text-align: center;
+      margin-bottom: 1.6rem;
+    }
+    .text {
+      // margin-bottom: 4.8rem;
+      font-size: 1.9rem;
+      line-height: 3rem;
+    }
+    .infoBox {
+      grid-template-columns: 1fr;
+      // grid-template-rows: 11rem;
+      row-gap: 4rem;
+      .infoCard {
+      }
+      & > :first-child,
+      & > :nth-child(3) {
+        div {
+          font-size: 3.6rem;
+          font-weight: 600;
+          line-height: 4.4rem;
+          margin-bottom: 2rem;
+        }
+      }
+      & > :nth-child(2) & > :nth-child(4) {
+        div {
+        }
+      }
+    }
+  }
+}
