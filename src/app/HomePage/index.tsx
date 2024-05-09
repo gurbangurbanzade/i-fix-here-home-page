@@ -1,3 +1,4 @@
+import Blogs from "@/components/Blogs";
 import Carousel from "@/components/Carousel";
 import ContactUs from "@/components/ContactUs";
 import Devices from "@/components/Devices";
@@ -13,16 +14,16 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      {/* <Devices /> bunu sil komponenti ile   */}
       <Carousel />
+      {/* Bu komponent responsiv deyil */}
       {/* <Repair /> */}
       <WhyiFixHere />
       <Feedback />
-      {/* <Frequently /> */}
-      {/* 
+      <Frequently />
+      <Blogs />
       <ContactUs />
       <JoinOur />
-      <Footer /> */}
+      <Footer />
     </>
   );
 };

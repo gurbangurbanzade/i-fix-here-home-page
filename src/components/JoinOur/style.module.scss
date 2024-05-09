@@ -1,76 +1,69 @@
-#upfooter {
+@import "./../../assets/styles/abstracts/mixins";
+#joinOurContainer {
   background-color: #2d3282;
-  padding: 48px 0px 48px 0px;
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    .left {
-      p {
-        color: white;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-      }
-      span {
-        color: #c7d7fe;
-      }
-    }
-    .right {
-      display: flex;
-      gap: 16px;
-      input {
-        padding: 10px 16px;
-        padding-right: 75px;
-        height: 44px;
-        border-radius: 10px;
-        border-style: none;
-      }
-      ::placeholder {
-        font-size: 14px;
-        font-weight: 500;
-        color: #344054;
-      }
-      button {
-        padding: 0px 18px;
-        height: 44px;
-        background-color: #444ce7;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 16px;
-        color: white;
-        border: none;
-      }
-    }
-  }
-}
 
-@media (max-width: 1200px) {
-  .footer {
-    display: flex;
-  }
-}
-
-@media (max-width: 992px) {
-  .footer {
-    flex-direction: column;
-    .right {
-      display: flex;
-      flex-direction: column;
-      input {
-        margin-top: 20px;
+  #joinOur {
+    padding: 4.8rem 0rem;
+    > div {
+      @include flexBox(row, space-between, center);
+      gap: 1rem;
+      .leftSide {
+        h3 {
+          color: white;
+          font-weight: 500;
+          font-size: 2rem;
+          line-height: 3rem;
+          margin-bottom: 0.8rem;
+        }
+        span {
+          color: #c7d7fe;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+      }
+      .rightSide {
+        display: flex;
+        gap: 16px;
+        input {
+          min-width: 28rem;
+          padding: 1rem 1.6rem;
+          height: 4.4rem;
+          border-radius: 0.8rem;
+          border-style: none;
+        }
+        ::placeholder {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          font-weight: 400;
+          color: #667085;
+        }
       }
     }
   }
 }
 
 @media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    .right {
-      display: flex;
-      flex-direction: column;
-      input {
-        margin-top: 20px;
+  #joinOurContainer {
+    #joinOur {
+      padding: 4rem 0rem;
+      > div {
+        @include flexBox(column, flex-start, flex-start);
+        gap: 3.2rem;
+        .leftSide {
+          h3 {
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+          }
+        }
+        .rightSide {
+          flex-direction: column;
+          width: 100%;
+
+          input {
+          }
+        }
       }
     }
   }

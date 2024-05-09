@@ -1,33 +1,57 @@
-#footer {
+@import "./../../assets/styles/abstracts/mixins";
+#footerContainer {
   background-color: #2d31a6;
-  padding: 64px 0px 48px 0px;
   .footer {
+    padding: 6.4rem 0rem 4.8rem 0rem;
+
     .side {
       display: flex;
-      justify-content: space-between;
-      .leftSide {
-        width: 343px;
-        .logoHere {
-          padding-bottom: 32px;
-          color: white;
-        }
-        span {
-          color: #c7d7fe;
-        }
-      }
-      .rightSide {
+      align-items: center;
+      justify-content: center;
+      padding-top: 1.8rem;
+      padding-bottom: 1.8rem;
+      padding: 1.8rem 1.6rem;
+      @include flexBox(row, space-between, center);
+      .nav {
         ul {
-          display: flex;
-          color: white;
-        }
-        .ulOne {
-          padding-bottom: 64px;
-          gap: 32px;
-        }
-        .ulTwo {
-          gap: 24px;
+          @include flexBox(row, space-between, center);
+          gap: 3.2rem;
+          li {
+            @include flexBox();
+            gap: 0.8rem;
+            a {
+              color: #c7d7fe;
+              font-weight: 600;
+              line-height: 2.4rem;
+            }
+          }
         }
       }
+      // display: flex;
+      // justify-content: space-between;
+      // .leftSide {
+      //   width: 343px;
+      //   .logoHere {
+      //     padding-bottom: 32px;
+      //     color: white;
+      //   }
+      //   span {
+      //     color: #c7d7fe;
+      //   }
+      // }
+      // .rightSide {
+      //   ul {
+      //     display: flex;
+      //     color: white;
+      //   }
+      //   .ulOne {
+      //     padding-bottom: 64px;
+      //     gap: 32px;
+      //   }
+      //   .ulTwo {
+      //     gap: 24px;
+      //   }
+      // }
     }
 
     .copyRight {
@@ -50,62 +74,78 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .footer {
-    .side {
-      display: flex;
+// @media (max-width: 1200px) {
+//   .footer {
+//     .side {
+//       display: flex;
 
-      .rightSide {
-        .ulTwo {
-          display: flex;
-          justify-content: flex-end;
-        }
-      }
-    }
-  }
-}
+//       .rightSide {
+//         .ulTwo {
+//           display: flex;
+//           justify-content: flex-end;
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: 992px) {
-  .footer {
-    .side {
-      flex-direction: column;
-      .rightSide {
-        padding-top: 25px;
-        .ulOne {
-          display: flex;
-          justify-content: center;
-
-          flex-wrap: wrap;
-          line-height: 24px;
-          .non {
-            display: none;
+  #footerContainer {
+    .footer {
+      .side {
+        .nav {
+          ul {
+            gap: 2rem;
           }
         }
-        .ulTwo {
-          display: flex;
-          justify-content: center;
-        }
       }
-    }
-    .copyRight {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
-      p {
-        order: 2;
-      }
-      ul {
-        orphans: 1;
-      }
+      // .copyRight {
+      //   display: flex;
+      //   flex-direction: column;
+      //   text-align: center;
+      //   gap: 20px;
+      //   p {
+      //     order: 2;
+      //   }
+      //   ul {
+      //     orphans: 1;
+      //   }
+      // }
     }
   }
 }
 
 @media (max-width: 768px) {
-  .footer {
-    .side {
-      flex-direction: column;
+  #footerContainer {
+    .footer {
+      padding: 4.8rem 0rem;
+      .side {
+        flex-direction: column;
+        .nav {
+          ul {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            li {
+              a {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+      }
+      .copyRight {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        p {
+          order: 2;
+        }
+        ul {
+          orphans: 1;
+        }
+      }
     }
   }
 }

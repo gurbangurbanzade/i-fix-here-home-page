@@ -1,33 +1,34 @@
 import React from "react";
 import styles from "./style.module.scss";
+import Image from "next/image";
+import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
+import { navElements } from "@/utils/constants";
 
 const Footer = () => {
   return (
-    <footer id={styles.footer}>
+    <footer id={styles.footerContainer}>
       <div className="container">
         <div className={styles.footer}>
           <div className={styles.side}>
-            <div className={styles.leftSide}>
-              <div className={styles.logoHere}>
-                <h1>İFİx Here</h1>
-              </div>
-              <span>Everyone deserves a second chance, so do your phone!</span>
+            <div>
+              <Image
+                src="logoNavbar.svg"
+                alt="Logo"
+                width={135}
+                height={44}
+                priority
+              />
             </div>
-
-            <div className={styles.rightSide}>
-              <ul className={styles.ulOne}>
-                <li>Repairs</li>
-                <li>Locations</li>
-                <li>About us</li>
-                <li>Contact Us</li>
-                <li>Blogs</li>
-                <li className={styles.non}>Careers</li>
-              </ul>
-              <ul className={styles.ulTwo}>
-                <li>Twtr</li>
-                <li>Lnkd</li>
-                <li>Fcbk</li>
-                <li>Gith</li>
+            <div className={styles.nav}>
+              <ul>
+                {navElements.map((elem, i) => {
+                  return (
+                    <li className={styles.navElem} key={uuidv4()}>
+                      <Link href={elem.path}>{elem.title}</Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

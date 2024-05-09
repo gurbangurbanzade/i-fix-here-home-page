@@ -1,75 +1,130 @@
-#contactUs {
-  .contactUs {
-    padding: 96px 0px 96px 0px;
+@import "./../../assets/styles/abstracts/mixins";
+#contactUsContainer {
+  #contactUs {
+    padding: 9.6rem 0rem 9.6rem 0rem;
     border-top: 0.1rem solid #d0d5dd;
-    display: flex;
-    justify-content: space-between;
+    @include flexBox(flex, space-between, flex-start);
     gap: 64px;
     .leftSide {
-      p {
-        color: #3538cd;
-        font-weight: 600;
-        font-size: 16px;
+      flex: 1;
+      .header {
+        margin-bottom: 4.8rem;
+        > p {
+          color: #3538cd;
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          margin-bottom: 1.2rem;
+        }
+        > h2 {
+          font-size: 3.6rem;
+          font-weight: 600;
+          line-height: 4.4rem;
+          color: #101828;
+          margin-bottom: 2rem;
+          letter-spacing: -2%;
+        }
+        > span {
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 3rem;
+          color: #667085;
+        }
       }
-      .icon {
-        margin: 48px 0px 16px 0px;
-        font-size: 20px;
+      .emailBox {
+        margin-bottom: 4.8rem;
+        img {
+          margin-bottom: 1.7rem;
+        }
+        h4 {
+          font-weight: 600;
+          font-size: 2rem;
+          margin-bottom: 0.8rem;
+          line-height: 3rem;
+          color: #101828;
+        }
+        div {
+          font-weight: 400;
+          font-size: 2rem;
+          line-height: 2.4rem;
+          color: #667085;
+          margin-bottom: 1.6rem;
+        }
+        p {
+          font-weight: 600;
+          font-size: 1.6rem;
+          font-style: 2rem;
+          line-height: 2.4rem;
+          color: #3538cd;
+        }
       }
-      .link {
-        margin-top: 8px;
-      }
-      h1 {
-        font-weight: 600;
-        font-style: 36px;
-        line-height: 44px;
-      }
-      h4 {
-        font-weight: 600;
-        font-style: 20px;
-        margin-bottom: 8px;
-      }
-      span {
-        font-weight: 400;
-        font-style: 20px;
-        line-height: 30px;
+
+      .locationBox {
+        img {
+          margin-bottom: 1.7rem;
+        }
+        h4 {
+          font-weight: 600;
+          font-size: 2rem;
+          margin-bottom: 0.8rem;
+          line-height: 3rem;
+          color: #101828;
+        }
+        div {
+          font-weight: 400;
+          font-size: 2rem;
+          line-height: 2.4rem;
+          margin-bottom: 1.6rem;
+          color: #667085;
+        }
+        p {
+          font-weight: 600;
+          font-size: 1.6rem;
+          font-style: 2rem;
+          line-height: 2.4rem;
+          color: #3538cd;
+        }
       }
     }
     .rightSide {
-      //   width: 576px;
+      flex: 1;
       background-color: #f9fafb;
-      border-radius: 16px;
-      padding: 40px 32px 40px 32px;
+      border-radius: 1.6rem;
+      padding: 4rem 3.2rem;
       form {
         display: flex;
         flex-direction: column;
-        label {
+        > label {
           font-weight: 500;
-          font-style: 14px;
-          line-height: 20px;
-          margin-bottom: 6px;
+          font-style: 1.4rem;
+          line-height: 2rem;
+          margin-bottom: 0.6rem;
+          color: #344054;
         }
-        input {
-          padding: 12px 16px;
+        > input {
+          padding: 1.2rem 1.6rem;
           width: 100%;
-          height: 44px;
-          border-radius: 10px;
-          border: 1px solid #d0d5dd;
-          margin-bottom: 18px;
+          height: 4.8rem;
+          border-radius: 0.8rem;
+          border: 0.1rem solid #d0d5dd;
+          margin-bottom: 2.4rem;
         }
         ::placeholder {
-          font-size: 16px;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
           font-weight: 400;
           color: #667085;
         }
         textarea {
-          padding-left: 13px;
           width: 100%;
-          height: 128px;
-          border-radius: 8px;
-          border: 1px solid #d0d5dd;
+          height: 12.8rem;
+          border-radius: 0.8rem;
+          border: 0.1rem solid #d0d5dd;
+          resize: none;
+          margin-bottom: 2.4rem;
+          padding: 1.2rem 1.6rem;
         }
         button {
-          margin-left: 16px;
           height: 48px;
           background-color: #444ce7;
           border-radius: 8px;
@@ -79,13 +134,29 @@
           border: none;
         }
         .checkbox {
-          display: flex;
-          place-items: center;
-          gap: 12px;
-          color: #667085;
+          @include flexBox(row, flex-start, center);
+          margin-bottom: 3.2rem;
+          gap: 1.2rem;
           input {
-            margin-top: 12px;
-            width: 20px;
+            width: 2rem;
+            height: 2rem;
+            width: 1.3em;
+            height: 1.3em;
+            background-color: white;
+            border-radius: 30%;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+            appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+          }
+          label {
+            color: #667085;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            margin-top: 0.2rem;
           }
         }
       }
@@ -93,23 +164,72 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .contactUs {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 992px) {
-  .contactUs {
-    flex-direction: column;
-    padding: 0px 16px 0px 16px;
-  }
-}
-
 @media (max-width: 768px) {
-  .contactUs {
-    flex-direction: column;
-    padding: 0px 16px 0px 16px;
+  #contactUsContainer {
+    padding: 0rem;
+    #contactUs {
+      @include flexBox(column, flex-start, stretch);
+      padding: 6.4rem 0rem;
+      gap: 4.8rem;
+      .leftSide {
+        padding: 0rem 1.6rem;
+        .header {
+          > p {
+            color: #3538cd;
+          }
+          > h2 {
+            font-size: 3rem;
+            line-height: 3.8rem;
+            margin-bottom: 1.6rem;
+          }
+          > span {
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+          }
+        }
+        .emailBox {
+          margin-bottom: 4.8rem;
+          img {
+            margin-bottom: 1.6rem;
+          }
+          h4 {
+            font-size: 1.8rem;
+            margin-bottom: 0.4rem;
+            line-height: 2.8rem;
+            color: #101828;
+          }
+          div {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+          }
+          p {
+            font-size: 1.6rem;
+          }
+        }
+
+        .locationBox {
+          img {
+            margin-bottom: 1.6rem;
+          }
+          h4 {
+            font-size: 1.8rem;
+            margin-bottom: 0.4rem;
+            line-height: 2.8rem;
+            color: #101828;
+          }
+          div {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+          }
+          p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .rightSide {
+        border-radius: 0rem;
+        padding: 4rem 1.6rem 6.4rem 1.6rem;
+      }
+    }
   }
 }

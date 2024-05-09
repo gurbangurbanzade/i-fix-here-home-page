@@ -1,28 +1,37 @@
 import React from "react";
 import styles from "./style.module.scss";
+import Image from "next/image";
+import emailIcon from "@/assets/images/icons/emailIcon.svg";
+import locationIcon from "@/assets/images/icons/locationIcon.svg";
 
 const ContactUs = () => {
   return (
-    <section id={styles.contactUs}>
-      <div className="container">
-        <div className={styles.contactUs}>
+    <section>
+      <div id={styles.contactUsContainer} className="container">
+        <div id={styles.contactUs}>
           <div className={styles.leftSide}>
-            <p>Contact us</p>
-            <h1>Get in touch</h1>
-            <span>
-              We’d love to hear from you. Please fill out this form or shoot us
-              an email.
-            </span>
+            <div className={styles.header}>
+              <p>Contact us</p>
+              <h2>Get in touch</h2>
+              <span>
+                We’d love to hear from you. Please fill out this form or shoot
+                us an email.
+              </span>
+            </div>
 
-            <p className={styles.icon}>✉</p>
-            <h4>Email</h4>
-            <span>Our friendly team is here to help.</span>
-            <p className={styles.link}>hi@ifixhere.com</p>
+            <div className={styles.emailBox}>
+              <Image src={emailIcon} alt="email icon" />
+              <h4>Email</h4>
+              <div>Our friendly team is here to help.</div>
+              <p className={styles.link}>hi@ifixhere.com</p>
+            </div>
 
-            <p className={styles.icon}>⚲</p>
-            <h4>6 different states</h4>
-            <span>Las Vegas, Chicago, New York, Seattle, California</span>
-            <p className={styles.link}>See All Locations ↗</p>
+            <div className={styles.locationBox}>
+              <Image src={locationIcon} alt="location icon" />
+              <h4>6 different states</h4>
+              <div>Las Vegas, Chicago, New York, Seattle, California</div>
+              <p className={styles.link}>See All Locations</p>
+            </div>
           </div>
           <div className={styles.rightSide}>
             <form action="">
@@ -45,7 +54,7 @@ const ContactUs = () => {
 
               <div className={styles.checkbox}>
                 <input type="checkbox" name="" id="" />
-                <span>You agree to our friendly privacy policy.</span>
+                <label>You agree to our friendly privacy policy.</label>
               </div>
 
               <button>Send message</button>

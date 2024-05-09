@@ -28,9 +28,8 @@
       height: 57.6rem;
 
       .textBox {
-        height: 100%;
+        flex: 1;
         border: 0.1rem solid #d0d5dd;
-        border-radius: 0.8rem 0rem 0rem 0.8rem;
         padding: 3.2rem;
 
         h3 {
@@ -45,12 +44,24 @@
           font-size: 2rem;
           line-height: 3rem;
           color: #667085;
-          margin-bottom: 9.8rem;
+          // margin-bottom: 9.8rem;
         }
       }
       .imgBox {
-        height: 100%;
+        flex: 1;
+
+        // height: 100%;
       }
     }
   }
+}
+
+@media (max-width: 1200px) {
+  // #repair {
+  //   .cardBox {
+  //     .card {
+  //       @include flexBox(column, center, center);
+  //     }
+  //   }
+  // }
 }

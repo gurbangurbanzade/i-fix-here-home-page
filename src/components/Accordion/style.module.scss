@@ -1,3 +1,6 @@
+@import "./../../assets/styles/abstracts/mixins";
 .accordion {
-  max-width: 76.8rem;
+  // max-width: 76.8rem;
+  width: 100%;
+  // @include flexBox(column, flex-start, center);
 }

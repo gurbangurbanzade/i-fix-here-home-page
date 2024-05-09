@@ -1,0 +1,190 @@
+@import "./../../assets/styles/abstracts/mixins";
+#blogsContainer {
+  #blogs {
+    padding: 9.6rem 0rem;
+    border-top: 0.1rem solid #d0d5dd;
+
+    .header {
+      @include flexBox(row, space-between, flex-start);
+      margin-bottom: 6.4rem;
+      .leftSide {
+        @include flexBox(column, flex-start, flex-start);
+        > h2 {
+          font-size: 3.6rem;
+          font-weight: 600;
+          line-height: 4.4rem;
+          color: #101828;
+          margin-bottom: 2rem;
+          letter-spacing: -2%;
+        }
+        > p {
+          font-weight: 400;
+          font-size: 2rem;
+          color: #475467;
+          line-height: 3rem;
+        }
+      }
+      .btnBox {
+        @include flexBox(row, flex-start, flex-start);
+        > button {
+          width: 4.4rem;
+          height: 4rem;
+          border: 0.1rem solid #d0d5dd;
+          background-color: white;
+          @include flexBox();
+          &.right {
+            border-radius: 0 0.8rem 0.8rem 0;
+          }
+
+          &.left {
+            border-radius: 0.8rem 0 0 0.8rem;
+          }
+        }
+      }
+    }
+    div {
+      position: relative;
+
+      .cardSlider {
+        display: flex;
+        overflow: hidden;
+        z-index: 2;
+        .cards {
+          @include flexBox(row, flex-start, flex-start);
+          transition: transform 0.5s ease;
+          gap: 3.2rem;
+        }
+
+        .card {
+          border: 0.1rem solid #eaecf0;
+          width: 38.4rem;
+          min-height: 53.6rem;
+          border-radius: 1.6rem;
+          overflow: hidden;
+
+          .imgBox {
+            img {
+            }
+          }
+          .cardContext {
+            padding: 2.4rem;
+            @include flexBox(column, space-between, flex-start);
+
+            .header {
+              @include flexBox(column, flex-end, flex-start);
+
+              .categoryBox {
+                @include flexBox(row, flex-start, center);
+                gap: 0.8rem;
+                background-color: #eef4ff;
+                padding: 0.8rem 1.2rem 0.4rem 0.4rem;
+                border-radius: 1.6rem;
+                margin-bottom: 1.6rem;
+                .category {
+                  padding: 0.2rem 0.8rem;
+                  color: #3538cd;
+                  font-weight: 500;
+                  font-size: 1.2rem;
+                  line-height: 1.8rem;
+                  background-color: white;
+                  border-radius: 1.6rem;
+                  @include flexBox(row, center, center);
+                }
+                .time {
+                  @include flexBox(row, center, center);
+                  color: #3538cd;
+                  font-weight: 500;
+                  font-size: 1.2rem;
+                  line-height: 1.8rem;
+                }
+              }
+
+              > h3 {
+                font-weight: 600;
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+                color: #101828;
+                margin-bottom: 1.2rem;
+              }
+              > p {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: #667085;
+              }
+            }
+
+            .date {
+              font-weight: 400;
+              font-size: 1.4rem;
+              line-height: 2rem;
+              color: #667085;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #feedbackContainer {
+    // padding-right: 0rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #blogsContainer {
+    #blogs {
+      padding: 6.4rem 0rem;
+      .header {
+        @include flexBox(column, flex-start, flex-start);
+        margin-bottom: 4.8rem;
+        .leftSide {
+          margin-bottom: 2rem;
+          > h2 {
+            font-weight: 600;
+            font-size: 3rem;
+            line-height: 3.8rem;
+            margin-bottom: 1.6rem;
+          }
+          > p {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+          }
+        }
+        .btnBox {
+          // display: none;
+        }
+      }
+      div {
+        .cardSlider {
+          .cards {
+            gap: 0.8rem;
+            .card {
+              max-width: 34.3rem;
+              min-height: 51.8rem;
+              .cardContext {
+                padding: 3.2rem 2.4rem;
+                .header {
+                  > h3 {
+                    font-weight: 600;
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    margin-bottom: 1.2rem;
+                  }
+                  > p {
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

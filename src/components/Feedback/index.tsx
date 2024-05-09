@@ -11,28 +11,6 @@ const Feedback = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const handleSlide = (direction: "left" | "right") => {
-    // if (sliderRef.current) {
-    //   const cards = sliderRef.current;
-    //   let cardWidth = cards.firstElementChild?.clientWidth || 0;
-    //   const offset = direction === "left" ? -cardWidth : cardWidth;
-    //   const currentTransform = cards.style.transform
-    //     ? parseInt(
-    //         cards.style.transform.replace("translateX(", "").replace("px)", "")
-    //       )
-    //     : 0;
-    //   const newTransform = currentTransform + offset;
-
-    //   cards.style.transition = "transform 0.5s ease-in-out";
-    //   cards.style.transform = `translateX(${newTransform}px)`;
-
-    //   if (newTransform > 0) {
-    //     cards.style.transform = `translateX(${
-    //       -cards.scrollWidth + cardWidth
-    //     }px)`;
-    //   } else if (newTransform < -cards.scrollWidth + cardWidth) {
-    //     cards.style.transform = "translateX(0)";
-    //   }
-    // }
     if (sliderRef.current) {
       const cards = sliderRef.current;
       let cardWidth = cards.firstElementChild?.clientWidth || 0;
@@ -44,7 +22,6 @@ const Feedback = () => {
         : 0;
       const newTransform = currentTransform + offset;
 
-      // Slider'ın sonunda olup olmadığını kontrol et
       const minTransform = -cards.scrollWidth + cardWidth;
       const maxTransform = 0;
       if (newTransform >= minTransform && newTransform <= maxTransform) {
@@ -88,7 +65,7 @@ const Feedback = () => {
                     <div key={uuuidv4()} className={styles.card}>
                       <Image
                         src={customer.img}
-                        alt="arrow right"
+                        alt={customer.name}
                         width={92}
                         height={92}
                       />

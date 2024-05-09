@@ -20,7 +20,7 @@ export const repairElements = [
     src: "/images/repair/phones.svg",
     title: "Phones",
     text: `
-  At “iFixHere”, we specialize in providing fast, reliable, and affordable smartphone repairs. Whether you own an Apple, Samsung, or any other phone brand, our experts are here to bring your device back to life. With years of experience and a commitment to quality, we understand your phone's unique needs and deliver top-notch solutions. Trust us for a seamless repair experience and get your smartphone working like new again.
+    At “iFixHere”, we specialize in providing fast, reliable, and affordable smartphone repairs. Whether you own an Apple, Samsung, or any other phone brand, our experts are here to bring your device back to life. With years of experience and a commitment to quality, we understand your phone's unique needs and deliver top-notch solutions. Trust us for a seamless repair experience and get your smartphone working like new again.
   `,
   },
   {
@@ -45,8 +45,8 @@ export const repairElements = [
   `,
   },
   {
-    src: "/images/repair/smartwatch.svg",
-    title: "Smartwatch",
+    src: "/images/repair/gameConsole.svg",
+    title: "Game Console",
     text: `
     Our skilled technicians are dedicated to breathing new life into your gaming world. With years of hands-on experience and an unwavering commitment to quality, we understand the complexities of game console technology. Place your trust in us for a seamless repair experience, and get back to gaming at full throttle!
   `,
@@ -96,5 +96,73 @@ export const customers = [
     position: "Head of Design,Layers",
     starCount: 5,
     feedback: "“iFixhere has saved us thousands of hours of work. ”",
+  },
+];
+
+export const accordionItems = [
+  {
+    title: "Will it really take 30 minutes to repair my phone?",
+    content:
+      "Yes, for almost 90% of repairs we offer. Our most popular repairs (iPhones, iPads, Samsung phones) usually take 30 minutes or less. Our customers love the convenience of dropping off the phone, going shopping and coming back to find the phone repair and fix screen. Schedule a free diagnostic test next time you come to the mall. Look out for our nearest shop for convenience",
+  },
+  {
+    title: "Do you have all the parts in stock, or do you have to order them?",
+    content:
+      "Yes, for almost 90% of repairs we offer. Our most popular repairs (iPhones, iPads, Samsung phones) usually take 30 minutes or less. Our customers love the convenience of dropping off the phone, going shopping and coming back to find the phone repair and fix screen. Schedule a free diagnostic test next time you come to the mall. Look out for our nearest shop for convenience",
+  },
+  {
+    title: "Do you offfer a guarantee with your repairs?",
+    content:
+      "Yes, for almost 90% of repairs we offer. Our most popular repairs (iPhones, iPads, Samsung phones) usually take 30 minutes or less. Our customers love the convenience of dropping off the phone, going shopping and coming back to find the phone repair and fix screen. Schedule a free diagnostic test next time you come to the mall. Look out for our nearest shop for convenience",
+  },
+  {
+    title: "Do you offer discounts for returning customers?",
+    content:
+      "Yes, for almost 90% of repairs we offer. Our most popular repairs (iPhones, iPads, Samsung phones) usually take 30 minutes or less. Our customers love the convenience of dropping off the phone, going shopping and coming back to find the phone repair and fix screen. Schedule a free diagnostic test next time you come to the mall. Look out for our nearest shop for convenience",
+  },
+  {
+    title: "Do you offer dicsounts for vets, teachers and students?",
+    content:
+      "Yes, for almost 90% of repairs we offer. Our most popular repairs (iPhones, iPads, Samsung phones) usually take 30 minutes or less. Our customers love the convenience of dropping off the phone, going shopping and coming back to find the phone repair and fix screen. Schedule a free diagnostic test next time you come to the mall. Look out for our nearest shop for convenience",
+  },
+  {
+    title: "Do you sell devices, or just repair them?",
+    content:
+      "Yes, for almost 90% of repairs we offer. Our most popular repairs (iPhones, iPads, Samsung phones) usually take 30 minutes or less. Our customers love the convenience of dropping off the phone, going shopping and coming back to find the phone repair and fix screen. Schedule a free diagnostic test next time you come to the mall. Look out for our nearest shop for convenience",
+  },
+];
+
+export const blogs = [
+  {
+    src: "/images/blogs/blog.svg",
+    category: "Tech news",
+    readTime: "8 min read",
+    title: "UX review presentations",
+    text: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    postDate: "20 Jan 2022",
+  },
+  {
+    src: "/images/blogs/blog.svg",
+    category: "Phones",
+    readTime: "8 min read",
+    title: "UX review presentations",
+    text: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    postDate: "20 Jan 2022",
+  },
+  {
+    src: "/images/blogs/blog.svg",
+    category: "Releases",
+    readTime: "8 min read",
+    title: "UX review presentations",
+    text: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    postDate: "20 Jan 2022",
+  },
+  {
+    src: "/images/blogs/blog.svg",
+    category: "Phones",
+    readTime: "8 min read",
+    title: "UX review presentations",
+    text: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    postDate: "20 Jan 2022",
   },
 ];

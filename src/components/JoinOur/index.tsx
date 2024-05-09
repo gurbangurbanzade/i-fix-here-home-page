@@ -1,23 +1,25 @@
 import React from "react";
 import styles from "./style.module.scss";
-
+import MainBtn from "@/components/MainBtn";
 const JoinOur = () => {
   return (
-    <div id={styles.upfooter}>
+    <section id={styles.joinOurContainer}>
       <div className="container">
-        <div className={styles.footer}>
-          <div className={styles.left}>
-            <p>Join our newsletter</p>
-            <span>We’ll send you a nice letter once per week. No spam.</span>
-          </div>
+        <div id={styles.joinOur}>
+          <div>
+            <div className={styles.leftSide}>
+              <h3>Join our newsletter</h3>
+              <span>We’ll send you a nice letter once per week. No spam.</span>
+            </div>
 
-          <div className={styles.right}>
-            <input type="text" placeholder="Enter your email" />
-            <button>Subscribe</button>
+            <div className={styles.rightSide}>
+              <input type="text" placeholder="Enter your email" />
+              <MainBtn title={"Subscribe"} icon={null} btnStyle={"blueBtn"} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
