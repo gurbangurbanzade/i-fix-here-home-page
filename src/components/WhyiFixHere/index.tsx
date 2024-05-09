@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./style.module.scss";
+import warrantyIcon from "./../../assets/images/icons/warrantyIcon.svg";
+import technicIcon from "./../../assets/images/icons/technicIcon.svg";
+import Image from "next/image";
 
 const WhyiFixHere = () => {
   return (
@@ -17,16 +20,23 @@ const WhyiFixHere = () => {
             <div className={styles.infoCard}>
               <div>30 Min</div>
               <h4>Quick Repair</h4>
-              <p>
+              <p className={styles.text}>
                 Our Speedy Repair Guarantee! We'll have your device back in
                 action in under 30 minutes.
               </p>
             </div>
 
             <div className={styles.infoCard}>
-              <div>salam</div>
+              <div>
+                <Image
+                  src={warrantyIcon}
+                  alt="warranty icon"
+                  width={72}
+                  height={72}
+                />
+              </div>
               <h4>Warranty for Repair</h4>
-              <p>
+              <p className={styles.text}>
                 Ensuring flawless device performance, we stand confidently
                 behind our work.
               </p>
@@ -34,16 +44,23 @@ const WhyiFixHere = () => {
             <div className={styles.infoCard}>
               <div>11 Years</div>
               <h4>Years of Experience</h4>
-              <p>
+              <p className={styles.text}>
                 With over 11 years of industry experience, our proven expertise
                 guarantees exceptional tech repairs and unmatched service
                 quality!
               </p>
             </div>
             <div className={styles.infoCard}>
-              <div>sagol</div>
+              <div>
+                <Image
+                  src={technicIcon}
+                  alt="texhnic icon"
+                  height={72}
+                  width={72}
+                />
+              </div>
               <h4>Professional Technicians</h4>
-              <p>
+              <p className={styles.text}>
                 Our Professional Technicians: Your devices in safe hands! We
                 resolve issues with expertise.
               </p>

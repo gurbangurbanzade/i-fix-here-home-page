@@ -1,0 +1,106 @@
+@import "./../../assets/styles/abstracts/mixins";
+#feedbackContainer {
+  // padding-right: 0rem;
+  // padding-right: 1.6rem;
+  #feedback {
+    padding: 9.6rem 0rem;
+
+    .header {
+      @include flexBox(row, space-between, flex-start);
+      margin-bottom: 6.4rem;
+      .leftSide {
+        @include flexBox(column, flex-start, flex-start);
+        > h2 {
+          font-size: 3.6rem;
+          font-weight: 600;
+          line-height: 4.4rem;
+          color: #101828;
+          margin-bottom: 2rem;
+          letter-spacing: -2%;
+        }
+        > p {
+          font-weight: 400;
+          font-size: 2rem;
+          color: #475467;
+          line-height: 3rem;
+        }
+      }
+      .btnBox {
+        @include flexBox(row, flex-start, flex-start);
+        gap: 3.2rem;
+        > button {
+          width: 5.6rem;
+          height: 5.6rem;
+          border-radius: 50%;
+          border: 0.1rem solid #eaecf0;
+          background-color: white;
+          &.right {
+            right: 0;
+          }
+
+          &.left {
+            left: 0;
+          }
+        }
+      }
+    }
+    div {
+      position: relative;
+      .cardSlider {
+        display: flex;
+        overflow-x: hidden;
+        position: absolute;
+        z-index: 2;
+        width: 99vw;
+
+        .cards {
+          @include flexBox(row, flex-start, flex-start);
+          transition: transform 0.5s ease;
+          gap: 3.2rem;
+        }
+
+        .card {
+          border: 0.1rem solid #d0d5dd;
+          width: 36rem;
+          padding: 2.4rem;
+          border-radius: 1.6rem;
+          > img {
+            margin-bottom: 1.6rem;
+          }
+          > h5 {
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+            color: #101828;
+            margin-bottom: 0.4rem;
+          }
+          > p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: #475467;
+            margin-bottom: 1.6rem;
+          }
+          .starBox {
+            margin-bottom: 0.4rem;
+          }
+          > h6 {
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 3rem;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #feedbackContainer {
+    padding-right: 0rem;
+    // #devices {
+    //   padding: 3.2rem 0rem;
+    // }
+  }
+}

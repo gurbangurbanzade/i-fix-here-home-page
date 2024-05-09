@@ -52,3 +52,49 @@ export const repairElements = [
   `,
   },
 ];
+
+export const customers = [
+  {
+    name: "Annie",
+    surname: "Stanley",
+    img: "/images/customers/girl.svg",
+    position: "Head of Design,Layers",
+    starCount: 5,
+    feedback:
+      "“iFixhere has saved us thousands of hours of work. We’re able to spin up”",
+  },
+  {
+    name: "Kelly",
+    surname: "Williams",
+    img: "/images/customers/boy.svg",
+    position: "Head of Design,Layers",
+    starCount: 5,
+    feedback:
+      "“iFixhere has saved us thousands of hours of work. We’re able to spin up projects and features faster.”",
+  },
+  {
+    name: "Kelly",
+    surname: "Williams",
+    img: "/images/customers/boy.svg",
+    position: "Head of Design,Layers",
+    starCount: 4,
+    feedback: "“iFixhere has saved us thousands of hours of work. ”",
+  },
+  {
+    name: "Kelly",
+    surname: "Williams",
+    img: "/images/customers/boy.svg",
+    position: "Head of Design,Layers",
+    starCount: 3,
+    feedback:
+      "“iFixhere has saved us thousands of hours of work. We’re able to spin up projects and features faster.”",
+  },
+  {
+    name: "Kelly",
+    surname: "Williams",
+    img: "/images/customers/girl.svg",
+    position: "Head of Design,Layers",
+    starCount: 5,
+    feedback: "“iFixhere has saved us thousands of hours of work. ”",
+  },
+];

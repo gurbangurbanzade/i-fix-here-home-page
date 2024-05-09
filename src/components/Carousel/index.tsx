@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 const Devices = () => {
   return (
     <section>
-      <div className="container">
+      <div id={styles.devicesContainer} className="container">
         <div id={styles.devices}>
           {deviceElements.map((elem) => {
             return (

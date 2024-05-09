@@ -2,8 +2,6 @@
 
 #devices {
   @include flexBox(row, space-between, center);
-  border-bottom: 0.1rem solid #d0d5dd;
-  border-top: 0.1rem solid #d0d5dd;
   padding: 6.4rem 5.6rem;
   gap: 3.2rem;
   overflow-x: auto;
@@ -25,6 +23,15 @@
       border-radius: 50%;
       @include flexBox();
       background-color: #e0eaff;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #devicesContainer {
+    padding-right: 0rem;
+    #devices {
+      padding: 3.2rem 0rem;
     }
   }
 }

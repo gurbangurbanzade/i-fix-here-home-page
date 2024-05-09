@@ -2,6 +2,7 @@
 #whyiFix {
   @include flexBox(column, center, center);
   border-top: 0.1rem solid #d0d5dd;
+  border-bottom: 0.1rem solid #d0d5dd;
   padding: 9.6rem 0rem;
 
   h2 {
@@ -12,7 +13,7 @@
     margin-bottom: 2rem;
     color: #101828;
   }
-  p {
+  > p {
     font-size: 2rem;
     font-weight: 400;
     line-height: 3rem;
@@ -57,6 +58,7 @@
     }
     & > :nth-child(2) & > :nth-child(4) {
       div {
+        margin-bottom: 1.8rem;
       }
     }
   }
@@ -90,20 +92,25 @@
       text-align: center;
       margin-bottom: 1.6rem;
     }
-    .text {
-      // margin-bottom: 4.8rem;
+    > p {
+      margin-bottom: 4.8rem;
       font-size: 1.9rem;
       line-height: 3rem;
     }
     .infoBox {
       grid-template-columns: 1fr;
-      // grid-template-rows: 11rem;
+      grid-template-rows: auto;
       row-gap: 4rem;
       .infoCard {
+        > .text {
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
       }
       & > :first-child,
       & > :nth-child(3) {
-        div {
+        > div {
           font-size: 3.6rem;
           font-weight: 600;
           line-height: 4.4rem;
@@ -111,8 +118,12 @@
         }
       }
       & > :nth-child(2) & > :nth-child(4) {
-        div {
+        > div {
+          margin-bottom: 1.6rem;
         }
+      }
+      & > :nth-child(2) {
+        grid-row: 1 span2;
       }
     }
   }
