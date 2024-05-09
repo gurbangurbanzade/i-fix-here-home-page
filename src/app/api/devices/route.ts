@@ -1,3 +1,6 @@
+// src/app/api/devices/route.ts
+
+import { NextApiResponse, NextApiRequest } from "next";
 import { NextResponse } from "next/server";
 
 export const deviceElements = [
@@ -8,6 +11,6 @@ export const deviceElements = [
   { id: 5, src: "/images/devices/gameConsole.svg", title: "Game Console" },
 ];
 
-export async function GET(req: Request, res: Response) {
+export async function GET() {
   return NextResponse.json(deviceElements);
 }

@@ -15,7 +15,7 @@ const Devices = () => {
   const [devices, setDevices] = useState<DeviceElement[]>([]);
   useEffect(() => {
     fetch("/api/devices", {
-      method: "POST",
+      method: "GET",
     })
       .then((res) => res.json())
       .then((data) => {
