@@ -4,146 +4,105 @@
   .footer {
     padding: 6.4rem 0rem 4.8rem 0rem;
 
-    .side {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 1.8rem;
-      padding-bottom: 1.8rem;
-      padding: 1.8rem 1.6rem;
-      @include flexBox(row, space-between, center);
-      .nav {
-        ul {
-          @include flexBox(row, space-between, center);
-          gap: 3.2rem;
-          li {
-            @include flexBox();
-            gap: 0.8rem;
-            a {
-              color: #c7d7fe;
-              font-weight: 600;
-              line-height: 2.4rem;
-            }
-          }
+    .upFooter {
+      @include flexBox(row, space-between, flex-start);
+      .leftSide {
+        max-width: 36rem;
+        > div {
+          margin-bottom: 3.2rem;
+        }
+        > p {
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: #c7d7fe;
         }
       }
-      // display: flex;
-      // justify-content: space-between;
-      // .leftSide {
-      //   width: 343px;
-      //   .logoHere {
-      //     padding-bottom: 32px;
-      //     color: white;
-      //   }
-      //   span {
-      //     color: #c7d7fe;
-      //   }
-      // }
-      // .rightSide {
-      //   ul {
-      //     display: flex;
-      //     color: white;
-      //   }
-      //   .ulOne {
-      //     padding-bottom: 64px;
-      //     gap: 32px;
-      //   }
-      //   .ulTwo {
-      //     gap: 24px;
-      //   }
-      // }
-    }
 
-    .copyRight {
-      border-top: 0.1rem solid #444ce7;
-      margin-top: 64px;
-      display: flex;
-      justify-content: space-between;
-      padding-top: 32px;
-      color: #a4bcfd;
-
-      ul {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        // li {
-        //   padding-left: 20px;
-        // }
-      }
-    }
-  }
-}
-
-// @media (max-width: 1200px) {
-//   .footer {
-//     .side {
-//       display: flex;
-
-//       .rightSide {
-//         .ulTwo {
-//           display: flex;
-//           justify-content: flex-end;
-//         }
-//       }
-//     }
-//   }
-// }
-
-@media (max-width: 992px) {
-  #footerContainer {
-    .footer {
-      .side {
+      .rightSide {
+        @include flexBox(column, space-between, flex-end);
+        gap: 6.4rem;
         .nav {
           ul {
-            gap: 2rem;
-          }
-        }
-      }
-      // .copyRight {
-      //   display: flex;
-      //   flex-direction: column;
-      //   text-align: center;
-      //   gap: 20px;
-      //   p {
-      //     order: 2;
-      //   }
-      //   ul {
-      //     orphans: 1;
-      //   }
-      // }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  #footerContainer {
-    .footer {
-      padding: 4.8rem 0rem;
-      .side {
-        flex-direction: column;
-        .nav {
-          ul {
-            width: 100%;
-            flex-wrap: wrap;
-            justify-content: center;
+            @include flexBox(row, space-between, center);
+            gap: 3.2rem;
             li {
+              @include flexBox();
+              gap: 0.8rem;
               a {
-                font-size: 1.6rem;
+                color: #c7d7fe;
+                font-weight: 600;
+                line-height: 2.4rem;
               }
             }
           }
         }
+        .socialMediaBox {
+          @include flexBox(row, flex-end, flex-start);
+          gap: 2.4rem;
+        }
       }
-      .copyRight {
+    }
+
+    .copyRight {
+      border-top: 0.1rem solid #444ce7;
+      margin-top: 6.4rem;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 3.2rem;
+      color: #a4bcfd;
+      > p {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+      ul {
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+        gap: 2rem;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #footerContainer {
+    .footer {
+      padding: 6.4rem 0rem 4.8rem 0rem;
+
+      .upFooter {
+        @include flexBox(column, space-between, center);
+        gap: 4.8rem;
+
+        .leftSide {
+          align-self: flex-start;
+          > div {
+            margin-bottom: 2.4rem;
+          }
+        }
+        .rightSide {
+          @include flexBox(column, center, center);
+          gap: 3.2rem;
+          .nav {
+            ul {
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 2.4rem;
+            }
+          }
+        }
+      }
+
+      .copyRight {
+        @include flexBox(column, center, center);
+        gap: 2.4rem;
         p {
           order: 2;
+          text-align: center;
         }
         ul {
-          orphans: 1;
+          order: 1;
+          font-size: 1.6rem;
         }
       }
     }

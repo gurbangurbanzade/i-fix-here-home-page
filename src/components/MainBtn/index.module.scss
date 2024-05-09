@@ -16,13 +16,30 @@
   background-color: #444ce7;
   border-color: #444ce7;
 }
+.blueBtnArrow {
+  color: #ffffff;
+  background-color: #444ce7;
+  border-color: #444ce7;
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
 
 .whiteBtn {
   color: #3538cd;
   background-color: #eef4ff;
   border-color: #eef4ff;
 }
-
+.blackBtn {
+  color: #344054;
+  background-color: #ffffff;
+  border-color: #d0d5dd;
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
 .blueBtnLarge {
   color: #ffffff;
   background-color: #444ce7;

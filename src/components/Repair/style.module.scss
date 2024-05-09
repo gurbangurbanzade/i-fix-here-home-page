@@ -11,12 +11,15 @@
     line-height: 4.4rem;
     color: #101828;
     margin-bottom: 2rem;
+    text-align: center;
   }
   p {
     font-weight: 400;
     font-size: 2rem;
     line-height: 3rem;
     color: #667085;
+    text-align: center;
+
     margin-bottom: 6.4rem;
   }
   .cardBox {
@@ -28,40 +31,147 @@
       height: 57.6rem;
 
       .textBox {
+        order: 1;
         flex: 1;
+        height: 100%;
         border: 0.1rem solid #d0d5dd;
-        padding: 3.2rem;
-
-        h3 {
-          font-weight: 600;
-          font-size: 4.8rem;
-          line-height: 6rem;
-          color: #101828;
-          margin-bottom: 2.4rem;
+        // padding: 3.2rem;
+        @include flexBox(column, space-between, flex-start);
+        .textBoxHeader {
+          padding: 3.2rem;
+          h3 {
+            font-weight: 600;
+            font-size: 4.8rem;
+            line-height: 6rem;
+            color: #101828;
+            margin-bottom: 2.4rem;
+          }
+          p {
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 3rem;
+            color: #667085;
+          }
         }
-        p {
-          font-weight: 400;
-          font-size: 2rem;
-          line-height: 3rem;
-          color: #667085;
-          // margin-bottom: 9.8rem;
+        .btnBox {
+          padding-left: 3.2rem;
+          padding-bottom: 3.2rem;
         }
       }
       .imgBox {
         flex: 1;
-
+        position: relative;
+        width: 300px;
+        height: 100%;
+        img {
+        }
         // height: 100%;
+      }
+    }
+
+    #imgRight {
+      .textBox {
+        order: 1;
+      }
+      .imgBox {
+        order: 2;
+        img {
+          border-radius: 0rem 0.8rem 0.8rem 0rem;
+        }
+      }
+    }
+    #imgLeft {
+      .textBox {
+        order: 2;
+      }
+      .imgBox {
+        order: 1;
+        img {
+          border-radius: 0.8rem 0rem 0rem 0.8rem;
+        }
       }
     }
   }
 }
 
-@media (max-width: 1200px) {
-  // #repair {
-  //   .cardBox {
-  //     .card {
-  //       @include flexBox(column, center, center);
-  //     }
-  //   }
-  // }
+@media (max-width: 992px) {
+  #repair {
+    padding: 6.4rem 0rem;
+    h2 {
+      font-size: 3rem;
+      line-height: 3.8rem;
+      margin-bottom: 1.6rem;
+    }
+    p {
+      margin-bottom: 4.8rem;
+    }
+    .cardBox {
+      gap: 3.2rem;
+      .card {
+        @include flexBox(column, center, center);
+        border-radius: 1.6rem;
+        height: 686px;
+
+        .textBox {
+          border-bottom-left-radius: 1.6rem;
+          border-bottom-right-radius: 1.6rem;
+
+          .textBoxHeader {
+            padding-bottom: 2.4rem;
+
+            h3 {
+              font-size: 3.6rem;
+              line-height: 4.4rem;
+              margin-bottom: 1.6rem;
+            }
+            div {
+              height: 13rem;
+              width: 100%;
+              text-align: left;
+              margin-bottom: 0rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: wrap;
+            }
+          }
+          .btnBox {
+            width: 100%;
+            padding-left: 3.2rem;
+            padding-right: 3.2rem;
+
+            padding-bottom: 3.2rem;
+            button {
+              width: 100%;
+            }
+          }
+        }
+        .imgBox {
+          position: relative;
+          width: 300px;
+          height: 100%;
+          img {
+            border-radius: 0rem;
+            border-top-left-radius: 1.6rem;
+            border-top-right-radius: 1.6rem;
+          }
+        }
+      }
+      #imgRight,
+      #imgLeft {
+        .textBox {
+          order: 2;
+        }
+        .imgBox {
+          order: 1;
+          width: 100%;
+          height: 34.3rem;
+          img {
+            border-radius: 0rem;
+            border-top-left-radius: 1.6rem;
+            border-top-right-radius: 1.6rem;
+          }
+        }
+      }
+    }
+  }
 }

@@ -4,6 +4,8 @@ import MainBtn from "../MainBtn";
 import Image from "next/image";
 import { repairElements } from "@/utils/constants";
 import { v4 as uuuidv4 } from "uuid";
+import arrow from "@/assets/images/icons/diagonalArrowIcon.svg";
+import whiteArrow from "@/assets/images/icons/whiteArrow.svg";
 
 const Repair = () => {
   return (
@@ -18,53 +20,39 @@ const Repair = () => {
 
           <div className={styles.cardBox}>
             {repairElements.map((element, i) => {
-              if (i % 2 === 0) {
-                return (
-                  <div key={uuuidv4()} className={styles.card}>
-                    <div className={styles.textBox}>
+              return (
+                <div
+                  id={i % 2 == 0 ? styles.imgRight : styles.imgLeft}
+                  key={uuuidv4()}
+                  className={styles.card}
+                >
+                  <div className={styles.textBox}>
+                    <div className={styles.textBoxHeader}>
                       <h3>{element.title}</h3>
-                      <p>{element.text}</p>
+                      <div>{element.text}</div>
+                    </div>
+                    <div className={styles.btnBox}>
                       <MainBtn
                         title="Start a Repair"
-                        btnStyle={"blueBtn"}
-                        icon={null}
-                      />
-                    </div>
-                    <div className={styles.imgBox}>
-                      <Image
-                        src={element.src}
-                        alt="phone image"
-                        width={608}
-                        height={576}
-                        layout="responsive"
-                        objectFit="cover"
+                        btnStyle={i == 0 ? "blueBtnArrow" : "blackBtn"}
+                        icon={i == 0 ? whiteArrow : arrow}
                       />
                     </div>
                   </div>
-                );
-              } else {
-                return (
-                  <div key={uuuidv4()} className={styles.card}>
-                    <div className={styles.imgBox}>
-                      <Image
-                        src={element.src}
-                        alt="phone image"
-                        width={608}
-                        height={576}
-                      />
-                    </div>
-                    <div className={styles.textBox}>
-                      <h3>{element.title}</h3>
-                      <p>{element.text}</p>
-                      <MainBtn
-                        title="Start a Repair"
-                        btnStyle={"blueBtn"}
-                        icon={null}
-                      />
-                    </div>
+                  <div className={styles.imgBox}>
+                    <Image
+                      src={element.src}
+                      alt="phone image"
+                      // width={608}
+                      // height={576}
+                      // layout="responsive"
+                      objectFit="cover"
+                      fill
+                      // priority
+                    />
                   </div>
-                );
-              }
+                </div>
+              );
             })}
           </div>
         </div>

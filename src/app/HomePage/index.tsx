@@ -15,8 +15,7 @@ const HomePage = () => {
     <>
       <Hero />
       <Carousel />
-      {/* Bu komponent responsiv deyil */}
-      {/* <Repair /> */}
+      <Repair />
       <WhyiFixHere />
       <Feedback />
       <Frequently />

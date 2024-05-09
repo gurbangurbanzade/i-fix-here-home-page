@@ -1,9 +1,17 @@
 import React from "react";
 import style from "./index.module.scss";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import phoneIcon from "@/assets/images/icons/phoneIcon.svg";
+interface MainBtnProps {
+  title: string;
+  icon?: {
+    src: StaticImageData;
+    alt: string;
+  } | null;
+  btnStyle: string;
+}
 
-const MainBtn = ({ title, icon, btnStyle }) => {
+const MainBtn: React.FC<MainBtnProps> = ({ title, icon, btnStyle }) => {
   return (
     <button className={`${style.mainBtn} ${style[btnStyle]}`}>
       {icon ? (
