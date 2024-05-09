@@ -170,6 +170,7 @@
     #contactUs {
       @include flexBox(column, flex-start, stretch);
       padding: 6.4rem 0rem;
+      padding-bottom: 0rem;
       gap: 4.8rem;
       .leftSide {
         padding: 0rem 1.6rem;

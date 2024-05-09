@@ -1,5 +1,4 @@
 import Blogs from "@/components/Blogs";
-import Carousel from "@/components/Carousel";
 import ContactUs from "@/components/ContactUs";
 import Devices from "@/components/Devices";
 import Feedback from "@/components/Feedback";
@@ -14,7 +13,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <Carousel />
+      <Devices />
       <Repair />
       <WhyiFixHere />
       <Feedback />

@@ -1,22 +1,55 @@
-import React from "react";
-import styles from "./style.module.scss";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { deviceElements } from "@/utils/constants";
+import styles from "./style.module.scss";
+import { DEVICE_URL, deviceElements } from "@/utils/constants";
 import { v4 as uuidv4 } from "uuid";
 
+interface DeviceElement {
+  id: number;
+  src: string;
+  title: string;
+}
+
 const Devices = () => {
+  const [devices, setDevices] = useState<DeviceElement[]>([]);
+  useEffect(() => {
+    fetch(DEVICE_URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setDevices(data);
+      });
+  }, []);
   return (
     <section>
-      <div className="container">
+      <div id={styles.devicesContainer} className="container">
         <div id={styles.devices}>
-          {deviceElements.map((elem) => {
+          {devices &&
+            devices.map((elem) => {
+              return (
+                <div key={uuidv4()} className={styles.card}>
+                  <div>
+                    <Image
+                      src={elem.src}
+                      alt={elem.title + " icon"}
+                      // objectFit="contain"
+                      height={20}
+                      width={20}
+                    />
+                  </div>
+                  <p>{elem.title}</p>
+                </div>
+              );
+            })}
+
+          {/* {deviceElements.map((elem) => {
             return (
               <div key={uuidv4()} className={styles.card}>
                 <div>
                   <Image
                     src={elem.src}
                     alt={elem.title + " icon"}
-                    objectFit="contain"
+                    // objectFit="contain"
                     height={20}
                     width={20}
                   />
@@ -24,7 +57,7 @@ const Devices = () => {
                 <p>{elem.title}</p>
               </div>
             );
-          })}
+          })} */}
         </div>
       </div>
     </section>

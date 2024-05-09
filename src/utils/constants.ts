@@ -1,3 +1,4 @@
+export const DEVICE_URL = "http://localhost:3000/api/devices";
 export const navElements = [
   { path: "/home", title: "Home" },
   { path: "/repairs", title: "Repairs", dropDown: true },
