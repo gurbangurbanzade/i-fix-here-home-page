@@ -1,6 +1,6 @@
 export const DEVICE_URL = "http://localhost:3000/api/devices";
 export const navElements = [
-  { path: "/home", title: "Home" },
+  { path: "/", title: "Home" },
   { path: "/repairs", title: "Repairs", dropDown: true },
   { path: "/locations", title: "Locations" },
   { path: "/about-us", title: "About us" },

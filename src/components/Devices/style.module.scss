@@ -24,6 +24,12 @@
       @include flexBox();
       background-color: #e0eaff;
     }
+    p {
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 2.8rem;
+      color: #344054;
+    }
   }
 }
 

@@ -12,21 +12,21 @@ interface DeviceElement {
 }
 
 const Devices = () => {
-  const [devices, setDevices] = useState<DeviceElement[]>([]);
-  useEffect(() => {
-    fetch("/api/devices", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setDevices(data);
-      });
-  }, []);
+  // const [devices, setDevices] = useState<DeviceElement[]>([]);
+  // useEffect(() => {
+  //   fetch("/api/devices", {
+  //     method: "GET",
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setDevices(data);
+  //     });
+  // }, []);
   return (
     <section>
       <div id={styles.devicesContainer} className="container">
         <div id={styles.devices}>
-          {devices &&
+          {/* {devices &&
             devices.map((elem) => {
               return (
                 <div key={uuidv4()} className={styles.card}>
@@ -42,9 +42,9 @@ const Devices = () => {
                   <p>{elem.title}</p>
                 </div>
               );
-            })}
+            })} */}
 
-          {/* {deviceElements.map((elem) => {
+          {deviceElements.map((elem) => {
             return (
               <div key={uuidv4()} className={styles.card}>
                 <div>
@@ -59,7 +59,7 @@ const Devices = () => {
                 <p>{elem.title}</p>
               </div>
             );
-          })} */}
+          })}
         </div>
       </div>
     </section>
