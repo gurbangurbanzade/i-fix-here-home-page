@@ -21,7 +21,7 @@ const WhyiFixHere = () => {
               <div>30 Min</div>
               <h4>Quick Repair</h4>
               <p className={styles.text}>
-                Our Speedy Repair Guarantee! We'll have your device back in
+                Our Speedy Repair Guarantee! Well have your device back in
                 action in under 30 minutes.
               </p>
             </div>
